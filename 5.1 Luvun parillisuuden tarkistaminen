@@ -1,0 +1,24 @@
+/* Tee ohjelma, joka pyytää käyttäjältä kokonaisluvun ja tarkistaa, onko luku parillinen vai pariton. 
+Jos syötetty luku on parillinen, tulostetaan näytölle "Luku 2 on parillinen.", jos luku on pariton, 
+tulostetaan näytölle "Luku 1 on pariton.". */
+
+#include <stdio.h>
+
+int main ()
+{
+	int kokonaisluku, parillinen_vai_pariton;
+	
+	printf("Anna kokonaisluku :");
+	scanf("%d", &kokonaisluku);
+	
+	parillinen_vai_pariton = kokonaisluku  % 2;
+	
+	if(parillinen_vai_pariton == 0) {
+		printf("Luku %d on parillinen.", kokonaisluku);
+	}
+	else if(parillinen_vai_pariton == 1 ) {
+		printf("Luku %d on pariton.", kokonaisluku);
+	}
+	return 0;
+			   
+}
