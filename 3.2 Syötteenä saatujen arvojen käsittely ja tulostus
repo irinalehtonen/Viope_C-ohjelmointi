@@ -1,0 +1,20 @@
+/* Tee ohjelma, joka pyytää käyttäjältä markkamäärän ja muuntaa syötetyn markkamäärän euroiksi. 
+Lopuksi ohjelma tulostaa markkamäärän euroina kahden desimaalin tarkkuudella näytölle. Euron kerroin on 5.94573. */
+
+#include <stdio.h>
+
+int main()
+{
+	float eurot = 5.94573;
+	float markat;
+	float jako;
+	
+	printf("Syötä jokin markkamäärä: ");
+	scanf("%f", &markat);
+	
+	jako = markat / eurot;
+	
+	printf("Markat euroina: %.2f\n", jako);
+	
+	return 0;
+}
