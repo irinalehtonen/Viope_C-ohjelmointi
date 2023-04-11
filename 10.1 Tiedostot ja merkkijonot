@@ -1,0 +1,37 @@
+/* 
+Tee ohjelma, joka kysyy käyttäjän etu- ja sukunimen, sekä tallentaa edelliset käyttäjän nimeämään tiedostoon.
+
+Ohjelman on kysyttävä ensin etunimeä. Toiseksi kysytään sukunimi ja lopuksi haluttu tiedoston nimi. 
+Tiedoston nimen etuosassa voi olla max. 8 merkkiä ja loppuosassa 3 (esim: henktied.usr). 
+Tiedoston on sijaittava samassa hakemistossa kuin itse ohjelma.
+
+Sukunimi voi olla korkeintaan 20 merkkiä pitkä ja etunimi 15 merkkiä. */
+
+#include <stdio.h>
+
+int main() {
+	FILE *tiedosto;
+	char etunimi[15], sukunimi[20];
+	char tiedostonnimi[8][3];
+	
+	printf("Ohjelma tallentaa etunimesi ja sukunimesi tiedostoon.\n");
+	
+	printf("Syötä etunimesi:");
+	scanf("%s", &etunimi[0]);
+	
+	printf("Syötä sukunimesi:");
+	scanf("%s", &sukunimi[0]);
+	
+	printf("Tiedosto johon haluat tallentaa nimesi: ");
+	scanf("%s", &tiedostonnimi[0][0]);
+	
+	tiedosto = fopen(tiedostonnimi, "w");
+	
+	fprintf(tiedosto, "%s %s", etunimi, sukunimi);
+	
+	fclose(tiedosto);
+	
+	printf("\nTallennus onnistui!\n");
+	
+return 0;
+}
