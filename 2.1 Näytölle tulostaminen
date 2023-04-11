@@ -1,0 +1,16 @@
+/* Tee toimiva C-kielinen ohjelma, 
+joka käynnistettäessä tulostaa monitorille sanat: 
+"Terve vaan kaikille!", 
+sekä rivinvaihtomerkin \n huutomerkin jälkeen. 
+Tulostuksen jälkeen ohjelma sulkee itsensä.*/
+
+#include <stdio.h>
+
+int main()
+{
+	
+	printf("Terve vaan kaikille!\n");
+		
+	
+	return 0;
+}
