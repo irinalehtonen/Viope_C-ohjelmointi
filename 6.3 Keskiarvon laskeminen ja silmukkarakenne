@@ -1,0 +1,30 @@
+/* Tee ohjelma, joka kysyy oppilaiden koearvosanoja (kokonaisluvut 4-10 käytössä) ja laskee syötettyjen arvosanojen keskiarvon. 
+Ohjelman tulee ottaa vastaan arvosanoja, kunnes arvosanojen syöttö lopetetaan negatiivisella kokonaisluvulla. 
+Lopuksi ohjelma tulostaa arvosanojen lukumäärän sekä lasketun keskiarvon, joka tulostetaan kahden desimaalin tarkkuudella. */
+
+#include <stdio.h>
+
+int main()
+{
+	int summa = 0, arvosana, lkm = 0;
+	float keskiarvo;
+		
+	printf("Ohjelma laskee syötettyjen arvosanojen keskiarvon.\n Lopetus negatiivisella kokonaisluvulla.");
+	
+	do{
+		printf("Anna arvosana (4-10): ");
+		scanf("%d", &arvosana);
+	
+		if(arvosana > 3 && arvosana < 11) {
+			summa = summa + arvosana;
+			lkm = lkm + 1;
+			}
+	} while(arvosana > 0);
+	
+	keskiarvo = (float) summa / (float) lkm;
+	printf("Ohjelmaan syötetty %d arvosanaa.\n", lkm);
+	printf("Arvosanojen keskiarvo: %.2f", keskiarvo);
+			   
+	return 0;
+}
+	
