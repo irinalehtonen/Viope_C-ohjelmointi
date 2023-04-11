@@ -1,0 +1,66 @@
+/* Tee yksinkertainen laskinohjelma, joka laskee kahden luvun erotuksen, summan tai tulon. 
+Ohjelma kysyy ensin mikä laskutoimitus suoritetaan. 
+Tämän jälkeen ohjelma kysyy luvut, suorittaa laskutoimituksen ja tulostaa saadun tuloksen. 
+Ohjelman valinta on tehtävä käyttämällä switch()-lausetta. */
+
+#include <stdio.h>
+
+int main()
+{
+	int numero, eka_luku, toka_luku, erotus, summa, tulo;
+	
+	printf("1: vähennyslasku\n2: yhteenlasku\n3: kertolasku\n");
+	
+	
+	printf("Valitse toiminto: ");
+	scanf("%d", &numero);
+		   
+	switch(numero) {
+	case 1:
+		{
+			printf("Anna eka luku: ");
+			scanf("%d", &eka_luku);
+			
+			printf("Anna toka luku: ");
+			scanf("%d", &toka_luku);
+			
+			erotus = eka_luku - toka_luku;
+			
+			printf("%d - %d = %d", eka_luku, toka_luku, erotus);
+			break;
+		}
+	case 2:
+		{
+			printf("Anna eka luku: ");
+			scanf("%d", &eka_luku);
+			
+			printf("Anna toka luku: ");
+			scanf("%d", &toka_luku);
+			
+			summa = eka_luku + toka_luku;
+			
+			printf("%d + %d = %d", eka_luku, toka_luku, summa);
+			break;
+		}
+	case 3:
+		{
+			printf("Anna eka luku: ");
+			scanf("%d", &eka_luku);
+			
+			printf("Anna toka luku: ");
+			scanf("%d", &toka_luku);
+			
+			tulo = eka_luku * toka_luku;
+			
+			printf("%d * %d = %d", eka_luku, toka_luku, tulo);
+			break;
+		}
+			
+	default:
+			break;
+				  
+		}
+			
+			
+	return 0;
+}
