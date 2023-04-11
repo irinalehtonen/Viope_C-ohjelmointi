@@ -1,0 +1,22 @@
+
+/* Tee ohjelma, joka pyytää käyttäjältä yhden kokonaisluvun, 
+laskee saadun luvun neliön ja tulostaa tuloksen näytölle 
+(tulosta myös rivinvaihtomerkki \n tuloksen jälkeen). 
+Tulostuksen jälkeen ohjelma sulkee itsensä. */
+
+#include <stdio.h>
+
+int main()
+{
+	int eka_luku, tulo;
+
+	printf("Anna kokonaisluku: ");
+	scanf("%d", &eka_luku);
+
+	tulo = eka_luku * eka_luku;
+
+	printf("Antamasi luvun neliö on %d\n", tulo);
+
+
+	return 0;
+}
