@@ -1,0 +1,50 @@
+/* Tee ohjelma, joka kysyy ensin käyttäjältä juoko hän teetä vai kahvia ja tämän jälkeen kuinka paljon. 
+Lopuksi ohjelma tulostaa jonkin lausahduksen seuraavan ohjeen mukaisesti: 
+Kahvi 0-2 kuppia: "Et taida juoda paljon kahvia.", 
+Kahvi 3-20 kuppia: "Juotpa paljon kahvia!", 
+tee 0-2 kuppia: "Et taida juoda paljon teetä.", 
+tee 3-20 kuppia: "Juotpa paljon teetä!", 
+Muuten "Ohjelmassa tapahtunut virhe!" 
+Määrä käsitellään kokonaislukumuuttujana ja juoman tyyppi merkkimuuttujana (k/t). 
+Isoja kirjaimia ei tarvitse huomioida. */
+
+#include <stdio.h>
+
+int main()
+{
+	char kahvi;
+	char vastaus;
+	int montako_kuppia;
+	
+	printf("Juotko kahvia vai teetä (k/t)?");
+	kahvi = getchar();
+	getchar();
+		   
+	if (kahvi == 'k') {
+		printf("Montako kuppia juot päivässä: ");
+		scanf("%d", &montako_kuppia);
+		if (vastaus < 3 )
+			printf("Et taida juoda paljoa kahvia.\n");
+		else if (vastaus > 2 < 21)
+ 			printf("Juotpa paljon kahvia!\n");
+		
+		
+	} else if (kahvi == 't') {
+		printf("Montako kuppia juot päivässä: ");
+		scanf("%d", &montako_kuppia);
+		vastaus = getchar();
+		getchar();
+		if(vastaus < 3 )
+			printf("Et taida juoda paljoa teetä.\n");
+		else if (vastaus > 2 < 21)
+ 			printf("Juotpa paljon teetä!\n");
+		
+	} else {
+		printf("Montako kuppia juot päivässä: ");
+		scanf("%d", &montako_kuppia);
+			printf("Ohjelmassa tapahtunut virhe!\n");
+	}
+	
+	return 0;
+}
+		
